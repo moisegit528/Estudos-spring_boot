@@ -1,0 +1,30 @@
+package br.com.moisegit.spring_boot_essentials.model;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+@Entity(name = "treinos")
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Builder
+public class TreinosEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(nullable = false)
+    private String nome;
+
+    @ManyToOne
+    @JoinColumn(name = "aluno_id")
+    private AlunosEntity aluno;
+
+
+}
