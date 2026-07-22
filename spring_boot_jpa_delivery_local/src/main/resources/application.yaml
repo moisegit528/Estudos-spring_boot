@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: Delivery-Local
+  datasource:
+    url: jdbc:mysql://localhost:3306/Delivery
+    username: ${USERNAME}
+    password: ${PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
