@@ -27,4 +27,8 @@ public class ExerciciosService {
                         .grupoMuscular(exerciciosDto.getGrupoMuscular())
                 .build());
     }
+
+    public List<ExerciciosEntity> getExerciciosDtoByGrupoMuscular(String grupoMuscular) {
+        return exerciciosRepository.findAllBygrupoMuscular(grupoMuscular);
+    }
 }

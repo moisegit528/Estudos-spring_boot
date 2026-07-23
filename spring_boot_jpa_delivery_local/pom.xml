@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.moisegit</groupId>
-	<artifactId>Delivery-Local</artifactId>
+	<artifactId>spring_boot_jpa_delivery_local</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>

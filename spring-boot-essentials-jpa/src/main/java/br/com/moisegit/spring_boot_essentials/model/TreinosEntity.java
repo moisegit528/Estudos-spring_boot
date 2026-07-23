@@ -26,5 +26,12 @@ public class TreinosEntity {
     @JoinColumn(name = "aluno_id")
     private AlunosEntity aluno;
 
+    @ManyToMany
+    @JoinTable(
+            name = "treinos_exercicios",
+            joinColumns = @JoinColumn(name = "treino_id"),
+            inverseJoinColumns = @JoinColumn(name = "exercicio_id")
+    )
+    private Set<ExerciciosEntity> exercicios = new HashSet<>();
 
 }

@@ -26,6 +26,14 @@ public class AvaliacaoFisicaService {
             throw new BadRequestException("Avaliação física já cadastrada para este aluno");
         }
 
+        avaliacaoFisica = AvaliacoesFisicasEntity.builder()
+                .peso(avaliacaoFisicaDto.getPeso())
+                .altura(avaliacaoFisicaDto.getAltura())
+                .porcentagemGorduralCorporal(avaliacaoFisicaDto.getPercentualGorduraCorporal())
+                .build();
+
+        aluno.setAvaliacaoFisica(avaliacaoFisica);
+        alunosRepository.save(aluno);
     }
 }
 
